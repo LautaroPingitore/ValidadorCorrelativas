@@ -22,25 +22,25 @@ public class Tests {
 
     @Test
     void inscripcionBasicas() {
-        assertTrue(pepe.inscripcionAceptada(basicas));
+        assertTrue(basicas.aprobada(pepe));
     }
 
     @Test
     void inscripcionParadigmas() {
-        assertFalse(pepe.inscripcionAceptada(inscPdp));
-        assertTrue(juan.inscripcionAceptada(inscPdp));
+        assertFalse(inscPdp.aprobada(pepe));
+        assertTrue(inscPdp.aprobada(juan));
     }
 
     @Test
     void inscripcionFisicaII() {
-        assertFalse(pepe.inscripcionAceptada(inscFis));
-        assertTrue(lu.inscripcionAceptada(inscFis));
+        assertFalse(inscFis.aprobada(pepe));
+        assertTrue(inscFis.aprobada(lu));
     }
 
     @Test
     void inscripcion2doNivel() {
-        assertFalse(pepe.inscripcionAceptada(nivel2));
-        assertTrue(lu.inscripcionAceptada(nivel2));
+        assertFalse(nivel2.aprobada(pepe));
+        assertTrue(nivel2.aprobada(lu));
     }
 
 }
